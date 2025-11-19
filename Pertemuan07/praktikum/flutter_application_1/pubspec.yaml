@@ -1,0 +1,44 @@
+name: flutter_application_1
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  # Catatan: Flutter mendukung SDK Dart 3.0.0 ke atas. 
+  # Menggunakan 3.0.0 atau yang lebih rendah (sesuai rekomendasi) lebih aman.
+  # Saya ubah kembali ke format yang lebih umum untuk menghindari masalah kompatibilitas
+  # jika lingkungan Anda belum support 3.9.2 (meskipun Dart 3.9.2 belum ada)
+  sdk: '>=3.0.0 <4.0.0' # Mengganti ^3.9.2 dengan rentang versi yang standar
+
+# --- DEPENDENCIES (Paket yang dibutuhkan saat runtime) ---
+dependencies:
+  flutter:
+    sdk: flutter
+  intl: ^0.20.2
+  flutter_colorpicker: ^1.1.0
+  file_picker: ^10.3.6
+  open_file: ^3.5.10
+  cupertino_icons: ^1.0.8
+
+# --- DEV DEPENDENCIES (Paket yang dibutuhkan saat pengembangan/testing) ---
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Saya menghapus 'kiss_dependencies' dan 'sort_pubspec_dependencies'
+  # karena ini bukan package atau sintaks YAML yang valid untuk dev_dependencies,
+  # dan mereka yang menyebabkan duplikasi kunci 'flutter: sdk: flutter'.
+
+  # Menggunakan flutter_lints: ^5.0.0
+  flutter_lints: ^5.0.0 
+
+# --- FLUTTER CONFIGURATION (Hanya ada SATU blok ini) ---
+flutter:
+
+  # Baris ini memastikan Material Icons dimuat
+  uses-material-design: true
+
+  # Untuk menambahkan assets ke aplikasi, tambahkan di sini:
+  # assets:
+  #   - images/
